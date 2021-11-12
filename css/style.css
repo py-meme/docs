@@ -44,7 +44,7 @@ body {
 .showcase{
   color: #dddddd;
   font-size: 15px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 
 .show-heading{
@@ -63,13 +63,19 @@ body {
   padding-bottom: 13px;
 }
 
+.major-heading{
+  font-size: 35px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
 .code{
   font-family: 'Inconsolata', monospace;
-  background-color: #dddddd;
-  color: #0D1117;
+  background-color: #f8f8f8;
+  color: #000000;
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   border-radius: 4px;
   padding: 7px;
@@ -78,12 +84,13 @@ body {
 .text{
   font-size: 15px;
   font-weight: 400;
+  padding-bottom: 45px;
 }
 
 footer{
   margin-left: 100px;
   margin-right: 300px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
 }
 
