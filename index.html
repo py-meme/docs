@@ -20,10 +20,9 @@
                 <li><img src="./assets/3.png" id="logo"></li>
                 <li><b><a href="#" style="text-decoration: none; padding-bottom: 25px; font-size: 22px; color: #dddddd; display: block;">py-meme docs</a></b></li>
                 <li><a href="#overview"><b>OVERVIEW</a></li>
-                <li><a href="#"><b>USAGE</a></li>
+                <li><a href="#methods"><b>METHODS</a></li>
+                <li><a href="#schema"><b>SCHEMA</a></li>
                 <li><a href="#"><b>QUICKSTART</a></li>
-                <li><a href="#"><b>FUNCTIONS</a></li>
-                <li><a href="#"><b>SAMPLES</a></li>
             </ul>
         </div>
         <div class="main">
@@ -95,6 +94,89 @@
                 <br>
                 <div><b>Q - What if I face an error and don't find a solution?</b></div>
                 <div>A - You can contact us on the discord info given and report bugs or get help with specific errors.</div>
+            </div>
+            <br>
+
+
+
+
+            <div class="major-heading" id="methods">
+                Methods
+            </div>
+            <div class="heading">
+                Random Meme
+            </div>
+            <div class="text">
+                <div>Responds with a random meme from the "r/memes" sub-reddit from reddit.com.</div>
+                <br>
+                <div><b>Endpoints:</b> 
+                    <div class="code">https://api.pymeme.repl.co/</div>
+                    <div class="code">https://api.pymeme.repl.co/random/</div>
+                </div>
+                <div><b>Returns:</b> A response in JSON format, which contains the post URL, image URL and the meme title.</div>
+                <div><b>Return type:</b> Dictionary</div>
+            </div>
+            <div class="heading">
+                Meme Search
+            </div>
+            <div class="text">
+                <div>Responds with the meme found after searching with the given keywords.
+                    Note: If no meme is found with the given keywords, a random meme is sent.</div>
+                <br>
+                <div><b>Endpoint:</b> 
+                    <div class="code">https://api.pymeme.repl.co/query=[queries]</div>
+                </div>
+                <div><b>Returns:</b> A response in JSON format, which contains the post URL, image URL and the meme title.</div>
+                <div><b>Return type:</b> Dictionary</div>
+            </div>
+            <div class="heading">
+                Docs
+            </div>
+            <div class="text">
+                <div>Doesn't respond with anything. However, this URL will redirect to the Documentation of the API.</div>
+                <br>
+                <div><b>Endpoint:</b> 
+                    <div class="code">https://api.pymeme.repl.co/help</div>
+                </div>
+                <div><b>Returns:</b> The Documentation of the py-meme API</div>
+                <div><b>Return type:</b> None</div>
+            </div>
+            
+
+
+            <div class="major-heading" id="schema">
+                Response Schema
+            </div>
+            <div class="text">
+                <div>The sole response format of the API is JSON.</div>
+                <br>
+                <div>A "response" property is always returned, which describes the communication between our server and the user's system. An error message is returned in the "response" property, if an error occurs.</div>
+                <br>
+                <div>All the meme content is present in the "meme" property of the response.</div>
+                <br>
+                <div>Note: The meme property is not present if an error occurs.</div>
+                <br>
+                <div>An example of a successful request.</div>
+                <div class="code">
+                    <div>{</div>
+                    <div>    "meme":</div>
+                    <div>    {</div>
+                    <div>        "author":"anoreksicni",</div>
+                    <div>        "downvotes":0,</div>
+                    <div>        "image url":"https://i.redd.it/0wbivqv9nvr31.jpg",</div>
+                    <div>        "post url":"https://www.reddit.com/dgcej8",</div>
+                    <div>        "title":"Its all coming together",</div>
+                    <div>        "upvotes":177702</div>
+                    <div>    },</div>
+                    <div>    "response":"Successfully fetched meme."</div>
+                    <div>}</div>
+                </div>
+                <div>An example of an unsuccessful request.</div>
+                <div class="code">
+                    <div>{</div>
+                    <div>    "response":"Error collecting the meme. It might be an error in your request or it might be an error on our side. If you believe it's an error on our side, please visit our documentation page."</div>
+                    <div>}</div>
+                </div>
             </div>
         </div>
         <footer>
