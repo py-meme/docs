@@ -66,11 +66,12 @@ body {
 .major-heading{
   font-size: 35px;
   font-weight: 600;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .code{
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Source Code Pro', monospace;
   background-color: #f8f8f8;
   color: #000000;
   margin-top: 15px;
@@ -85,6 +86,28 @@ body {
   font-size: 15px;
   font-weight: 400;
   padding-bottom: 45px;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float: left;
+  width: 29%;
+  padding: 10px;
+  text-align: center;
+  color: #242424;
+}
+
+#boxes .box img{
+  width: 75px; 
 }
 
 footer{
