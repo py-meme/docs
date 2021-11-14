@@ -88,6 +88,11 @@ body {
   padding-bottom: 45px;
 }
 
+.text a{
+  text-decoration: underline;
+  color: #dddddd
+}
+
 .container{
   width: 80%;
   margin: auto;
